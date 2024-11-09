@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error 404</title>
+    <style>
+        /* Importar la fuente desde Google */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+        /* Resetear márgenes y padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #000; /* Fondo negro si la imagen no carga */
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Imagen de fondo */
+        .fondo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://img.freepik.com/fotos-premium/superposicion-fondo-textura-ladrillos-apenados_626124-1632.jpg'); /* Nueva imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            filter: blur(8px) brightness(0.7); /* Desenfoque y ajuste de brillo para el fondo */
+            z-index: -1; /* Aseguramos que el fondo quede detrás del texto */
+        }
+
+        /* Fondo semitransparente detrás del texto */
+        .mensaje {
+            position: relative;
+            z-index: 2;
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente para texto */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        .mensaje h1 {
+            font-size: 15vw; /* Tamaño grande para el "404" */
+            color: #fff;
+            margin: 0;
+            text-shadow: 3px 3px 0 #333; /* Sombra de texto */
+            animation: aparecerTexto 1s ease-out;
+        }
+
+        .mensaje p {
+            font-size: 4vw; /* Tamaño del texto para "Error 404 Not Found" */
+            color: #ddd; /* Color gris claro */
+            margin-top: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            animation: aparecerTexto 2s ease-out;
+        }
+
+        .highlight {
+            color: #3498db;
+            font-weight: 700;
+        }
+
+        /* Ajuste para los corazones */
+        .heart {
+            color: #e74c3c;
+            font-size: 4vw; /* Tamaño de los corazones igual al texto */
+            margin: 0 5px;
+            animation: latido 1.5s infinite alternate;
+        }
+
+        /* Animaciones */
+        @keyframes aparecerTexto {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes latido {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Estilo para dispositivos móviles */
+        @media (max-width: 768px) {
+            .mensaje h1 {
+                font-size: 10vw;
+            }
+            .mensaje p {
+                font-size: 2.5vw;
+            }
+            .heart {
+                font-size: 2.5vw; /* Ajuste para dispositivos móviles */
+            }
+        }
+
+        /* Estilo para dispositivos pequeños */
+        @media (max-width: 480px) {
+            .mensaje h1 {
+                font-size: 7rem;
+            }
+            .mensaje p {
+                font-size: 1rem;
+            }
+            .heart {
+                font-size: 1.5rem; /* Ajuste para dispositivos pequeños */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="fondo"></div> <!-- Imagen de fondo con efectos -->
+    <div class="mensaje">
+        <h1>404</h1>
+        <p><span class="heart">❤</span> eres el <span class="highlight">if</span> que siempre quiero que se cumpla en mi <span class="highlight">else</span> <span class="heart">❤</span></p>
+    </div>
+</body>
+</html>
